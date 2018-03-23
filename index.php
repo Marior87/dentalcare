@@ -68,7 +68,7 @@
             <img src="img/nosotros.jpg" alt="" class="imgNosotros">
             <div class="contenedorHeader2">
                 <h3 class="headerNosotros2">SOBRE NOSOTROS</h3>
-                <p class="parrafoNosotros">Somos una empresa comprometida con tu salud, es por ello que con nosotros encontrarás a los mejores profesionales para atender tus necesidades específicas, contamos con los mejores ortodoncistas, periodoncistas y cirujanos maxilofacianles así como también contamos con los mejores equipos de última tecnología.</p>
+                <p class="parrafoNosotros">Somos una empresa comprometida con tu salud, es por ello que con nosotros encontrarás a los mejores profesionales para atender tus necesidades específicas, contamos con los mejores ortodoncistas, periodoncistas y cirujanos maxilofaciales así como también contamos con los mejores equipos de última tecnología.</p>
             </div>
         </div>
     </div>

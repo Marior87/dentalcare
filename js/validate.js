@@ -5,7 +5,7 @@ $(function() {
         || value.length >= 6
         && /\d/.test(value)
         && /[a-z]/i.test(value);
-    }, 'La constraseña tiene que ser mayor o igual a 6 carácteres y debe tener al menos un número');
+    }, 'La constraseña tiene que ser mayor o igual a 6 carácteres y debe tener al menos un número y una letra');
     
     $.validator.addMethod( "lettersonly", function( value, element ) {
 	return this.optional( element ) || /^[a-z]+$/i.test( value );
