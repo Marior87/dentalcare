@@ -16,8 +16,8 @@
     <div class="login-card">
     <h1>Regístrate</h1><br>
     
-    
-    <form action="sesionIniciada.html" id="register-form" method="POST">
+    <!-- Se redirecciona a la página de inicio al no tener conexión a una base de datos que alimentar -->
+    <form action="index.php" id="register-form" autocomplete="off" method="POST">
         <input type="text" name="user" placeholder="Usuario" id="idUser">
         <input type="text" name="email" placeholder="Correo Electrónico" id="idEmail">
         <div class="contPassword">
@@ -52,7 +52,7 @@
   
 
   <div class="login-help">
-    <a href="iniciar.html">Iniciar Sesión</a>
+    <a href="iniciar.php">Iniciar Sesión</a>
   </div>
 </div>
 </div>

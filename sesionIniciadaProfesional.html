@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dental Care</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/iniciadoCliente2.css">
+</head>
+<body>
+ <div class="contTitulo">
+  <h1 class="paciente">Od. Virginia Labarca</h1><br>
+  </div>
+   <div class="contenedor">
+    <div class="login-card">
+    <div class="contImg">
+    <img src="img/perfil1.jpg" alt="">
+    </div>
+    <div class="contenedorIniciado">
+    <h3 class="nombreIniciado">Nombre y Apellido Paciente</h3><span>Mario Rivas</span>
+    </div>
+    <div class="contenedorIniciado">
+    <h3 class="edadIniciado">Edad</h3><span>24</span>
+    </div>
+    <div class="contenedorIniciado">
+    <h3 class="patologiaIniciado">Patología</h3><span>Tratamiento de Conducto</span>
+    </div>
+     <div class="contenedorIniciado">
+    <h3 class="trabajoIniciado">Tratamiento Pendiente</h3><span>Blanqueamiento</span>
+    </div>
+</div>
+<div class="login-card">
+    <div class="contImg">
+    <img src="img/perfil2.jpg" alt="" class="img2">
+    </div>
+    <div class="contenedorIniciado">
+    <h3 class="nombreIniciado">Nombre y Apellido Paciente</h3><span>Paola Quintero</span>
+    </div>
+    <div class="contenedorIniciado">
+    <h3 class="edadIniciado">Edad</h3><span>35</span>
+    </div>
+    <div class="contenedorIniciado">
+    <h3 class="patologiaIniciado">Patología</h3><span>Ortodoncia</span>
+    </div>
+     <div class="contenedorIniciado">
+    <h3 class="trabajoIniciado">Tratamiento Pendiente</h3><span>Retenedores Fijos</span>
+    </div>
+</div>
+</div>
+<div class="contenedorIniciado">
+    <center>
+    <form enctype="multipart/form-data" action="subirarchivo.php" method="POST">
+    <label>Incluir Nuevo Paciente</label>
+    <br>
+    <input type="hidden" name="MAX_FILE_SIZE" value="400000">
+    <input type="file" name="subir-archivo" class="login login-submit" id="file" accept=".json">
+    <input type="submit" value="Subir Archivo">
+    </form>
+    </center>
+    <a href="index.php">Volver al Inicio</a>
+</div>
+</body>
+</html>

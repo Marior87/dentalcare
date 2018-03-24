@@ -2,11 +2,18 @@
 <!-- Indicamos que se inicie una sesión -->
 <?php
  session_start();
+ /*
  if (isset($_POST['user'])){
  	$_SESSION['user'] = $_POST['user'];
  	setcookie('nombreUsuario',$_POST['user'],time()+86400,'/');
  	setcookie('passUsuario',$_POST['pass'],time()+86400,'/');
- }
+ }*/
+
+    if (isset($_SESSION['usuario'])){
+        $usuario = $_SESSION['usuario'];
+        setcookie('nombreUsuario',$usuario,time()+86400,'/');
+    }
+
 
 ?>
 
@@ -36,10 +43,10 @@
 
         <?php 
 
-        if (!isset($_SESSION['user'])){
+        if (!isset($_SESSION['usuario'])){
         	echo '<div class="contInicio">
         	            <li class="menuItem2"><a href="iniciar.php" class="menuLink2">Ingresar</a></li>
-        	            <li class="menuItem2"><a href="registro.html" class="menuLink2">Registrarse</a></li>
+        	            <li class="menuItem2"><a href="registro.php" class="menuLink2">Registrarse</a></li>
         	        </div>
         	        </div>';
 
@@ -47,7 +54,7 @@
         	//Usamos htmlentities para evitar html injection, cuando tengamos que acceder a alguna base de datos se debe
         	//sanitizar también de SQL injection...
         	echo '<div class="contInicio">
-        	            <li class="menuItem2"><a href="perfil.php" class="menuLink2">Hola '.htmlentities($_SESSION['user']).'</a></li>
+        	            <li class="menuItem2"><a href="redirigir.php" class="menuLink2">Hola '.htmlentities($_SESSION['usuario']).'</a></li>
         	            <li class="menuItem2"><a href="cerrar-sesion.php" class="menuLink2">Cerrar Sesión</a></li>
         	        </div>
         	        </div>';

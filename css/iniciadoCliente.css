@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+
+body {
+    background: url(InciarSesion.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.login-card {
+    padding: 40px;
+    width: 30%;
+    padding-top: 50px;
+    background-color: #F7F7F7;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.login-card h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.contenedorIniciado {
+    margin: 20px;
+    padding: 3px;
+}
+.contImg {
+    display: flex;
+    justify-content: center;
+}
+img {
+    border: 0.5px solid rgba(0 ,0 ,0 ,0.3);
+    width: 50%;
+    height: 80%;
+    border-radius: 50%;
+    text-align: center;
+}
+@media screen and(max-width: 400px) {
+    .login-card {
+        padding-top: 40px;
+    }
+}

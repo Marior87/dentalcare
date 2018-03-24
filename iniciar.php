@@ -22,7 +22,7 @@
    <div class="contenedor">
     <div class="login-card">
     <h1>Iniciar Sesión</h1><br> 
-  <form action="index.php" method="POST" autocomplete="off">
+  <form action="datossesion.php" method="POST" autocomplete="off">
     <?php
       echo '<input type="text" name="user" autocomplete="off" placeholder="Usuario" value='.'"'.$placeholderUser.'"'.'>';
       echo '<input type="password" name="pass" placeholder="Contraseña">';
@@ -30,7 +30,7 @@
     <input type="submit" name="login" class="login login-submit" value="Iniciar Sesión">
   </form>
   <div class="login-help">
-    <a href="#">Registráte</a>
+    <a href="registro.php">Registráte</a>
   </div>
 </div>
 </div>
