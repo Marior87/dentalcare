@@ -1,3 +1,30 @@
+<?php
+    session_start();
+
+    include_once('conexion.php');
+
+    $id_cliente = $_SESSION['id_usuario'];
+    $query = "SELECT * FROM tratamiento WHERE id_cliente = '".$id_cliente."'";
+    $queryBuscar = $mysqli->query($query);
+
+    if ($queryBuscar) {
+
+    $i = 1;
+
+    $tratamiento = array();
+    $patologia = array();
+
+    while($fila = mysqli_fetch_array($queryBuscar)){
+
+        $tratamiento[$i] = $fila['tratamiento'];
+        $patologia[$i] =  $fila['patologia'];
+        $i = $i + 1;
+
+    }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +42,33 @@
     <img src="img/perfil1.jpg" alt="">
     </div>
     <div class="contenedorIniciado">
-    <h3 class="nombreIniciado">Nombre y Apellido</h3><span>Mario Rivas</span>
+    <h3 class="nombreIniciado">Nombre y Apellido</h3><span><?php echo $_SESSION['nombre']." ".$_SESSION['apellido']?></span>
     </div>
     <div class="contenedorIniciado">
-    <h3 class="edadIniciado">Edad</h3><span>24</span>
+    <h3 class="edadIniciado">Edad</h3><span><?php echo $_SESSION['edad']?></span>
     </div>
     <div class="contenedorIniciado">
-    <h3 class="patologiaIniciado">Patología</h3><span>Tratamiento de Conducto</span>
+    <h3 class="patologiaIniciado">Patología</h3><span><?php 
+
+        foreach ($patologia as $key => $value) {
+            echo $value;
+            echo "<br>";
+        }
+
+
+          ?></span>
     </div>
      <div class="contenedorIniciado">
     
-    <h3 class="trabajoIniciado">Tratamiento Pendiente</h3><span>Blanqueamiento</span>
+    <h3 class="trabajoIniciado">Tratamiento Pendiente</h3><span><?php 
+
+        foreach ($tratamiento as $key => $value) {
+            echo $value;
+            echo "<br>";
+        }
+
+
+          ?></span>
     
 
     <br><br><br>

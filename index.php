@@ -9,8 +9,8 @@
  	setcookie('passUsuario',$_POST['pass'],time()+86400,'/');
  }*/
 
-    if (isset($_SESSION['usuario'])){
-        $usuario = $_SESSION['usuario'];
+    if (isset($_SESSION['nombre'])){
+        $usuario = $_SESSION['nombre'];
         setcookie('nombreUsuario',$usuario,time()+86400,'/');
     }
 
@@ -43,7 +43,7 @@
 
         <?php 
 
-        if (!isset($_SESSION['usuario'])){
+        if (!isset($_SESSION['nombre'])){
         	echo '<div class="contInicio">
         	            <li class="menuItem2"><a href="iniciar.php" class="menuLink2">Ingresar</a></li>
         	            <li class="menuItem2"><a href="registro.php" class="menuLink2">Registrarse</a></li>
@@ -54,7 +54,7 @@
         	//Usamos htmlentities para evitar html injection, cuando tengamos que acceder a alguna base de datos se debe
         	//sanitizar también de SQL injection...
         	echo '<div class="contInicio">
-        	            <li class="menuItem2"><a href="redirigir.php" class="menuLink2">Hola '.htmlentities($_SESSION['usuario']).'</a></li>
+        	            <li class="menuItem2"><a href="opciones.php" class="menuLink2">Hola '.htmlentities($_SESSION['nombre']).'</a></li>
         	            <li class="menuItem2"><a href="cerrar-sesion.php" class="menuLink2">Cerrar Sesión</a></li>
         	        </div>
         	        </div>';

@@ -1,12 +1,13 @@
 <?php
   session_start();
+  /*
   if (!isset($_COOKIE['nombreUsuario']) || !isset($_COOKIE['passUsuario'])){
       $placeholderUser = "";
     $placeholderPass = "";
   } else {
     $placeholderUser = $_COOKIE['nombreUsuario'];
     $placeholderPass = $_COOKIE['passUsuario'];
-  }
+  }*/
 ?>
 
 
@@ -22,9 +23,9 @@
    <div class="contenedor">
     <div class="login-card">
     <h1>Iniciar Sesión</h1><br> 
-  <form action="datossesion.php" method="POST" autocomplete="off">
+  <form action="iniciarsesion.php" method="POST" autocomplete="off">
     <?php
-      echo '<input type="text" name="user" autocomplete="off" placeholder="Usuario" value='.'"'.$placeholderUser.'"'.'>';
+      echo '<input type="text" name="user" autocomplete="off" placeholder="Usuario">';
       echo '<input type="password" name="pass" placeholder="Contraseña">';
     ?>
     <input type="submit" name="login" class="login login-submit" value="Iniciar Sesión">

@@ -17,7 +17,7 @@
     <h1>Regístrate</h1><br>
     
     <!-- Se redirecciona a la página de inicio al no tener conexión a una base de datos que alimentar -->
-    <form action="index.php" id="register-form" autocomplete="off" method="POST">
+    <form action="guardar.php" id="register-form" autocomplete="off" method="POST">
         <input type="text" name="user" placeholder="Usuario" id="idUser">
         <input type="text" name="email" placeholder="Correo Electrónico" id="idEmail">
         <div class="contPassword">
@@ -42,7 +42,7 @@
         </div>
         <div class="radioCont">
         <label for="idProfesional">Odontólogo</label>
-        <input type="radio" value="profesional" name="tipo" id="idProfesional" class="radio">
+        <input type="radio" value="odontologo" name="tipo" id="idProfesional" class="radio">
         </div>
         </div>
         </div>
