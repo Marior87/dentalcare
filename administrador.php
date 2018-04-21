@@ -11,8 +11,9 @@ if (!$_SESSION['rol'] == 'administrador'){
 	$queryBuscar = $mysqli->query($query);
 
     if ($queryBuscar) {
-
-	echo "<table border=".'1'.">
+    
+    echo "<div id='tab'>";
+	echo "<table border=".'1'." name='tabla'>
 
 			<th>id_usuario</th><th>Usuario</th><th>Correo</th><th>Contraseña</th><th>Nombre</th><th>Apellido</th><th>Direccion</th><th>Edad</th><th>Sexo</th><th>Rol</th><th>Estado</th>";
 
@@ -31,21 +32,23 @@ if (!$_SESSION['rol'] == 'administrador'){
 		$id_rol_ = $fila['id_rol'];
 		$id_estado_ = $fila['id_estado'];
 
-		if ($id_estado_ == 1){
+
 				echo "<tr>
 			<td>".$id_."</td><td>".$usuario_."</td><td>".$correo_."</td><td>".$contrasena_."</td><td>".$nombre_."</td><td>".$apellido_."</td><td>".$direccion_."</td><td>".$edad_."</td><td>".$id_sexo_."</td><td>".$id_rol_."</td><td>".$id_estado_."</td><td><input type='button' value='Editar' onclick='modificar(".$id_.")'></td>";
-		}
+		
 
         }
 
 }
-
+echo "</div>";
 
 echo "<center>
 
-<input type='button' name='reporte' value='Generar Reporte'>
+<input type='button' name='reporte' value='Generar Reporte' onclick='reporte()'>
 
 </center>";
+
+
 
 
 }
@@ -65,5 +68,19 @@ echo "<center>
 	}
 
 
+	function reporte(){
+		window.location.href = 'reporte.php';
+	}
+
+
+
+
+
+
+
+
+
 
 </script>
+
+
