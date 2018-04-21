@@ -2,12 +2,7 @@
 <!-- Indicamos que se inicie una sesión -->
 <?php
  session_start();
- /*
- if (isset($_POST['user'])){
- 	$_SESSION['user'] = $_POST['user'];
- 	setcookie('nombreUsuario',$_POST['user'],time()+86400,'/');
- 	setcookie('passUsuario',$_POST['pass'],time()+86400,'/');
- }*/
+
 
     if (isset($_SESSION['nombre'])){
         $usuario = $_SESSION['nombre'];

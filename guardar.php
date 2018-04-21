@@ -31,11 +31,14 @@ $queryInsertar = $mysqli->query("INSERT INTO usuarios (id_usuario, usuario, corr
 								VALUES (NULL, '$usuario', '$correo', '$contrasena', '$nombre', '$apellido', '$direccion', '$edad','$s','$r','$estado')");
 
 if ($queryInsertar) {
-	echo "<span class = 'succes'><br><br>Datos Registrados Exitosamente<br><br></span>";
-	echo "<br><br><a href='index.php'>Volver</a>";
+	echo "<script type='text/javascript'>alert('El usuario ha sido registrado exitosamente');
+	window.location.href = 'index.php';
+
+	</script>";
 
 } else {
 	die('ERROR: No se puede ejecutar query para insertar datos.'.$mysqli->error);
+	echo "<br><br><a href='index.php'>Volver</a>";
 }
 
 

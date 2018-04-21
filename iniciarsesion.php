@@ -44,9 +44,17 @@ if ($queryBuscar) {
 			break;
 	}
 
+	if (!$fila['usuario']==""){
+
+		echo "<script type='text/javascript'>window.location.href = 'index.php';</script>";
+	} else {
+		echo "<script type='text/javascript'>alert('El usuario no existe');
+		window.location.href = 'registro.php';</script>";
+	}
 
 
-	header('Location: index.php');
+
+	//header('Location: index.php');
 
 } else {
 	die('ERROR: No se puede ejecutar query para insertar datos.'.$mysqli->error);

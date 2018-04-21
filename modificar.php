@@ -40,12 +40,14 @@ $queryModificar2 = $mysqli->query($query2);
 
 
 if ($queryModificar1 && $queryModificar2) {
-	echo "<span class = 'succes'><br><br>Datos Modificados Exitosamente<br><br></span>";
-	header('Location: administrador.php');
+		echo "<script type='text/javascript'>alert('Datos modificados exitosamente');
+		window.location.href = 'administrador.php';</script>";
 
 } else {
-	die('ERROR: No se pudieron modificar los datos.'.$mysqli->error);
-	echo "<br><br><a href='index.php'>Volver</a>";
+	//die('ERROR: No se pudieron modificar los datos.'.$mysqli->error);
+	echo "<script type='text/javascript'>alert('Datos no pudieron ser modificados');
+		window.location.href = 'administrador.php';</script>";
+
 }
 
 

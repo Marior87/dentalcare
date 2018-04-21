@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include "datossesion.php"
+	//include "datossesion.php";
 
 	$ruta = "registros/";
 	$ruta = $ruta.basename($_FILES['subir-archivo']['name']);
@@ -21,6 +21,7 @@
 				alert(El archivo ".basename($_FILES['subir-archivo']['name'])." no ha podido ser subido);
 			</script>
 		";
-		redirigir($_SESSION['tipousuario']);
+		header("Location: cliente.php");
+		//redirigir($_SESSION['tipousuario']);
 	}
 ?>

@@ -1,13 +1,6 @@
 <?php
   session_start();
-  /*
-  if (!isset($_COOKIE['nombreUsuario']) || !isset($_COOKIE['passUsuario'])){
-      $placeholderUser = "";
-    $placeholderPass = "";
-  } else {
-    $placeholderUser = $_COOKIE['nombreUsuario'];
-    $placeholderPass = $_COOKIE['passUsuario'];
-  }*/
+
 ?>
 
 
